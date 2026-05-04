@@ -1,0 +1,293 @@
+/* ==========================================
+   VARIABLES GLOBALES DE COLOR
+   ========================================== */
+:root {
+    --color-primario: #0B1C3A; /* Azul oscuro gerencial */
+    --color-secundario: #C89B3C; /* Dorado de la flecha de tu logo */
+}
+
+/* ==========================================
+   ESTILOS GENERALES
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; /* Fondo gris muy sutil */
+}
+
+.text-primario {
+    color: var(--color-primario) !important;
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN Y LOGO
+   ========================================== */
+.custom-navbar {
+    background-color: var(--color-primario) !important;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--color-secundario) !important;
+    font-size: 1.4rem; /* Tamaño ideal para computadoras */
+    letter-spacing: 1px;
+    display: flex; /* Esto hace que el logo y el texto queden uno al lado del otro */
+    align-items: center;
+}
+
+/* Estilos específicos para la imagen del logo */
+.navbar-logo {
+    height: 45px; /* Altura perfecta para PC */
+    width: auto;
+    margin-right: 12px;
+    border-radius: 6px; /* Bordes ligeramente redondeados para que el cuadro blanco se vea elegante */
+}
+/* ==========================================
+   ENLACES DE NAVEGACIÓN (BOTONES DEL MENÚ)
+   ========================================== */
+.nav-link {
+    color: white !important; /* Color blanco por defecto */
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s ease; /* Hace que el cambio de color sea suave */
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-secundario) !important; /* Se vuelve dorado al pasar el mouse o estar en esa página */
+}
+
+/* ==========================================
+   AJUSTES RESPONSIVOS PARA CELULARES
+   ========================================== */
+@media (max-width: 991px) {
+    .navbar-brand {
+        font-size: 1.05rem; /* Letra significativamente más pequeña en móviles */
+        letter-spacing: 0.5px;
+    }
+    
+    .navbar-logo {
+        height: 35px; /* Logo más pequeño en móviles */
+        margin-right: 8px;
+    }
+}
+/* ==========================================
+   BOTONES
+   ========================================== */
+.btn-dorado {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn-dorado:hover {
+    background-color: #a8802e;
+    color: white;
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* ==========================================
+   CABECERAS Y SECCIÓN PRINCIPAL
+   ========================================== */
+.hero-section {
+    background: linear-gradient(rgba(11, 28, 58, 0.85), rgba(11, 28, 58, 0.85)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+.page-header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 120px 0 60px 0;
+}
+
+/* ==========================================
+   PÁGINA: SERVICIOS
+   ========================================== */
+.card-servicio {
+    border: none;
+    border-top: 5px solid var(--color-secundario);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.card-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.precio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #dee2e6;
+}
+.precio-item:last-child {
+    border-bottom: none;
+}
+.precio-valor {
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* ==========================================
+   PÁGINA: ACERCA DE (NOSOTROS)
+   ========================================== */
+.card-identidad {
+    border: none;
+    border-left: 5px solid var(--color-secundario);
+    background-color: #ffffff;
+}
+.perfil-img {
+    border: 8px solid #f8f9fa;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.objetivos-lista li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid var(--color-secundario);
+}
+
+/* ==========================================
+   PÁGINA: CONTACTO
+   ========================================== */
+.contact-card {
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(200, 155, 60, 0.1);
+    color: var(--color-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    font-size: 1.5rem;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.25rem rgba(200, 155, 60, 0.25);
+}
+.btn-enviar {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+}
+.btn-enviar:hover {
+    background-color: #162b52;
+    color: white;
+}
+.referente-tag {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-primario);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+/* ==========================================
+   CARRUSEL DE LOGOS DE CLIENTES (ANIMACIÓN INFINITA)
+   ========================================== */
+.logos-carousel {
+    overflow: hidden; /* Oculta los logos que se salen del borde de la pantalla */
+    padding: 30px 0;
+    background: white;
+    white-space: nowrap; /* Evita que los logos salten a la siguiente línea */
+    position: relative;
+}
+
+/* Efecto de degradado blanco a los lados (opcional, le da un toque muy premium) */
+.logos-carousel:before,
+.logos-carousel:after {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.logos-carousel:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+.logos-carousel:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.logos-slide {
+    display: inline-block;
+    /* La animación dura 20 segundos y es infinita. Si la quieres más rápida, baja los segundos */
+    animation: slide-logos 20s infinite linear; 
+}
+
+/* Ajustes de cada logo individual (Tamaño base para celulares) */
+.logos-slide img {
+    height: 85px; /* Un poco más grandes en móviles */
+    margin: 0 30px; 
+    filter: grayscale(100%);
+    opacity: 0.8; /* Le subimos la opacidad para que no se vean tan pálidos */
+    transition: all 0.3s ease;
+}
+
+/* Ajustes específicos para Computadoras y Tablets grandes */
+@media (min-width: 768px) {
+    .logos-slide img {
+        height: 140px; /* ¡Mucho más grandes en PC! */
+        margin: 0 70px; /* Más espacio de respiración entre ellos */
+    }
+}
+/* ==========================================
+   FOTOGRAMAS CLAVE (EL MOTOR DEL MOVIMIENTO)
+   ========================================== */
+@keyframes slide-logos {
+    from {
+        transform: translateX(0); /* Inicia en la posición original */
+    }
+    to {
+        transform: translateX(-50%); /* Se desplaza justo la mitad para crear el bucle infinito */
+    }
+}
+/* Al pasar el mouse o tocar el logo, recupera su color original y resalta */
+.logos-slide img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1); /* Hace que el logo crezca un 10% para darle un efecto "pop" */
+    cursor: pointer; /* Cambia la flecha por la manito para indicar que es interactivo */
+}
+/* ==========================================
+   GALERÍA DE FOTOS EN SERVICIOS
+   ========================================== */
+.foto-galeria-container {
+    /* Forzamos una altura específica en computadoras para que ambas fotos se vean parejas */
+    height: 400px; 
+}
+
+.foto-galeria {
+    height: 100%;
+    object-fit: cover; /* Hace que la foto llene el espacio sin aplastarse ni estirarse */
+    object-position: center; /* Centra el enfoque de la foto */
+    transition: transform 0.5s ease; /* Transición suave para el zoom */
+}
+
+/* Efecto de acercamiento al pasar el mouse */
+.foto-galeria-container:hover .foto-galeria {
+    transform: scale(1.05);
+}
+
+/* Ajuste para celulares: Permitimos que la altura sea automática para no cortar cabezas en pantallas pequeñas */
+@media (max-width: 991px) {
+    .foto-galeria-container {
+        height: auto;
+        max-height: 350px;
+    }
+}
